@@ -291,50 +291,50 @@ pub enum Syscall
 impl Syscall
 {
 	#[inline(always)]
-	pub unsafe fn syscall0(self) -> SyscallResult
+	pub unsafe fn syscall0(self) -> ::SyscallResult
 	{
 		syscalls::syscall0(self as SyscallNumber)
 	}
 
 	#[inline(always)]
-	pub unsafe fn syscall1(self, a: SyscallArgument) -> SyscallResult
+	pub unsafe fn syscall1(self, a: SyscallArgument) -> ::SyscallResult
 	{
 		syscalls::syscall1(self as SyscallNumber, a)
 	}
 
 	#[inline(always)]
-	pub unsafe fn syscall2(self, a: SyscallArgument, b: SyscallArgument) -> SyscallResult
+	pub unsafe fn syscall2(self, a: SyscallArgument, b: SyscallArgument) -> ::SyscallResult
 	{
 		syscalls::syscall2(self as SyscallNumber, a, b)
 	}
 
 	#[inline(always)]
-	pub unsafe fn syscall3(self, a: SyscallArgument, b: SyscallArgument, c: SyscallArgument) -> SyscallResult
+	pub unsafe fn syscall3(self, a: SyscallArgument, b: SyscallArgument, c: SyscallArgument) -> ::SyscallResult
 	{
 		syscalls::syscall3(self as SyscallNumber, a, b, c)
 	}
 
 	#[inline(always)]
-	pub unsafe fn syscall4(self, a: SyscallArgument, b: SyscallArgument, c: SyscallArgument, d: SyscallArgument) -> SyscallResult
+	pub unsafe fn syscall4(self, a: SyscallArgument, b: SyscallArgument, c: SyscallArgument, d: SyscallArgument) -> ::SyscallResult
 	{
 		syscalls::syscall4(self as SyscallNumber, a, b, c, d)
 	}
 
 	#[inline(always)]
-	pub unsafe fn syscall5(self, a: SyscallArgument, b: SyscallArgument, c: SyscallArgument, d: SyscallArgument, e: SyscallArgument) -> SyscallResult
+	pub unsafe fn syscall5(self, a: SyscallArgument, b: SyscallArgument, c: SyscallArgument, d: SyscallArgument, e: SyscallArgument) -> ::SyscallResult
 	{
 		syscalls::syscall5(self as SyscallNumber, a, b, c, d, e)
 	}
 	
 	#[inline(always)]
-	pub unsafe fn syscall6(self, a: SyscallArgument, b: SyscallArgument, c: SyscallArgument, d: SyscallArgument, e: SyscallArgument, f: SyscallArgument) -> SyscallResult
+	pub unsafe fn syscall6(self, a: SyscallArgument, b: SyscallArgument, c: SyscallArgument, d: SyscallArgument, e: SyscallArgument, f: SyscallArgument) -> ::SyscallResult
 	{
 		syscalls::syscall6(self as SyscallNumber, a, b, c, d, e, f)
 	}
 	
 	#[cfg(any(target_arch = "aarch64", target_arch = "arm"))]
 	#[inline(always)]
-	pub unsafe fn syscall7(self, a: SyscallArgument, b: SyscallArgument, c: SyscallArgument, d: SyscallArgument, e: SyscallArgument, f: SyscallArgument, g: SyscallArgument) -> SyscallResult
+	pub unsafe fn syscall7(self, a: SyscallArgument, b: SyscallArgument, c: SyscallArgument, d: SyscallArgument, e: SyscallArgument, f: SyscallArgument, g: SyscallArgument) -> ::SyscallResult
 	{
 		syscalls::syscall7(self as SyscallNumber, a, b, c, d, e, f, g)
 	}
