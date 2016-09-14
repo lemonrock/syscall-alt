@@ -8,14 +8,17 @@
 * An enum defining common Linux syscalls;
 * Some minor wrapper logic to make straightforward to work with syscalls.
 * Correct Syscall / Posix error codes ('E'), eg `EINVAL`
-	* These differ slightly on MIPS and PowerPC
-	* MIPS64 is the same as MIPS
-	* PowerPC64 is the same as PowerPC
-	* PowerPC is ***nearly*** identical to x86_64 bar `EDEADLOCK`:-
-		* PowerPC is the only platform on which `EDEADLOCK != EDEADLK` (so watch out when using `match`)
-	* MIPS is ***very*** different to x86_64
-		* But it has ***exactly*** the same set of E numbers
+	* Linux:-
+		* These differ slightly on MIPS and PowerPC
+		* MIPS64 is the same as MIPS
+		* PowerPC64 is the same as PowerPC
+		* PowerPC is ***nearly*** identical to x86_64 bar `EDEADLOCK`:-
+			* PowerPC is the only platform on which `EDEADLOCK != EDEADLK` (so watch out when using `match`)
+		* MIPS is ***very*** different to x86_64
+			* But it has ***exactly*** the same set of E numbers
 * SYS call numbers and E numbers are available for every arch, eg if you want to know them for `arm`, but are compiled for `x86_64`, they are available
+	* Watch out if using `EDEADLOCK`, `EDEADLCK`, `ENOTSUP` and `EOPNOTSUPP`; these vary in definition and value, sometimes being missing, sometimes being equal
+	* Take a little care with `EWOULDBLOCK` and `EAGAIN`; all current platforms make `EWOULDBLOCK` the same as `EAGAIN`, but this isn't required by POSIX
 
 The code is very much 'early-days', so expect breaking changes.
 
