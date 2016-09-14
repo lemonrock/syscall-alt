@@ -4,16 +4,6 @@
 
 #![feature(asm)]
 
-// RUST BUG: The include! macro has an incorrect path inside an expanded macro
-// macro_rules! linux_like_syscall
-// {
-// 	($t:item) =>
-// 	(
-// 		#[cfg(all(any(target_os = "linux", target_os = "android"), any(target_arch = "aarch64", target_arch = "arm", target_arch = "mips", target_arch = "powerpc", target_arch = "powerpc64", target_arch = "x86", target_arch = "x86_64")))]
-// 		$t
-// 	)
-// }
-
 
 #[cfg(all(any(target_os = "linux", target_os = "android"), any(target_arch = "aarch64", target_arch = "arm", target_arch = "mips", target_arch = "mips64", target_arch = "powerpc", target_arch = "powerpc64", target_arch = "s390x", target_arch = "x86", target_arch = "x86_64")))] mod linux_like_syscall;
 #[cfg(all(any(target_os = "linux", target_os = "android"), any(target_arch = "aarch64", target_arch = "arm", target_arch = "mips", target_arch = "mips64", target_arch = "powerpc", target_arch = "powerpc64", target_arch = "s390x", target_arch = "x86", target_arch = "x86_64")))] pub use self::linux_like_syscall::*;
