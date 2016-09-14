@@ -8,11 +8,9 @@ pub mod dragonfly;
 
 pub mod freebsd;
 
-pub mod ios;
-
 pub mod linux_like;
 
-pub mod macos;
+pub mod macosx_like;
 
 pub mod netbsd;
 

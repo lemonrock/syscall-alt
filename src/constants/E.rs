@@ -5,9 +5,8 @@
 #[cfg(target_os = "bitrig")] pub use ::constants::bitrig::E::*;
 #[cfg(target_os = "dragonfly")] pub use ::constants::dragonfly::E::*;
 #[cfg(target_os = "freebsd")] pub use ::constants::freebsd::E::*;
-#[cfg(target_os = "ios")] pub use ::constants::ios::E::*;
 #[cfg(any(target_os = "android", target_os = "linux"))] pub use ::constants::linux_like::E::*;
-#[cfg(target_os = "macos")] pub use ::constants::macos::E::*;
+#[cfg(any(target_os = "ios", target_os = "macos"))] ppub use ::constants::macosx_like::E::*;
 #[cfg(target_os = "netbsd")] pub use ::constants::netbsd::E::*;
 #[cfg(target_os = "openbsd")] pub use ::constants::openbsd::E::*;
 #[cfg(target_os = "solaris")] pub use ::constants::solaris::E::*;
