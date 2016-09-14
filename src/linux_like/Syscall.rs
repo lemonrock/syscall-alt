@@ -2,6 +2,8 @@
 // Copyright © 2016 The developers of syscall-alt. See the COPYRIGHT file in the top-level directory of this distribution and at https://raw.githubusercontent.com/lemonrock/syscall-alt/master/COPYRIGHT.
 
 
+use ::constants::linux_like::SYS::*;
+
 // Strictly speaking, isize is incorrect. We want SyscallNumber
 // But we are not allowed to use that as the required RFC was closed.
 // isize currently tracks c_long size and signedness in all current libc

@@ -2,8 +2,5 @@
 // Copyright © 2016 The developers of syscall-alt. See the COPYRIGHT file in the top-level directory of this distribution and at https://raw.githubusercontent.com/lemonrock/syscall-alt/master/COPYRIGHT.
 
 
-#[cfg(all(any(target_os = "linux", target_os = "android"), any(target_arch = "aarch64", target_arch = "arm", target_arch = "mips", target_arch = "mips64", target_arch = "powerpc", target_arch = "powerpc64", target_arch = "s390x", target_arch = "x86", target_arch = "x86_64")))]
-pub use ::linux_like::constants::E::*;
-
-#[cfg(windows)]
-pub use ::windows::constants::E::*;
+#[cfg(any(target_os = "android", target_os = "linux"))] pub use ::constants::linux_like::E::*;
+#[cfg(windows)] pub use ::constants::windows::E::*;

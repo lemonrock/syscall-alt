@@ -11,6 +11,6 @@ include!("SyscallArgument.rs");
 include!("SyscallNumber.rs");
 include!("SyscallResult.rs");
 
+pub mod constants;
 pub mod linux_like;
 pub mod windows;
-pub mod E;

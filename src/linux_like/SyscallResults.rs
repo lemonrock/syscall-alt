@@ -4,7 +4,7 @@
 
 use ::PosixErrorNumber;
 use ::SyscallResult;
-use ::linux_like::constants::E;
+use ::constants::linux_like::E;
 
 
 pub const E2BIG: SyscallResult = convert(E::E2BIG);
