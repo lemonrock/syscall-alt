@@ -15,6 +15,8 @@ include!("SyscallNumber.rs");
 #[cfg(target_arch = "arm")] use self::arm::*;
 #[cfg(target_arch = "mips")] mod mips;
 #[cfg(target_arch = "mips")] use self::mips::*;
+#[cfg(target_arch = "mips")] mod mips64;
+#[cfg(target_arch = "mips")] use self::mips64::*;
 #[cfg(target_arch = "powerpc")] mod powerpc;
 #[cfg(target_arch = "powerpc")] use self::powerpc::*;
 #[cfg(target_arch = "powerpc64")] mod powerpc64;
@@ -25,5 +27,9 @@ include!("SyscallNumber.rs");
 #[cfg(target_arch = "x86_64")] use self::x86_64::*;
 #[cfg(target_arch = "s390x")] mod s390x;
 #[cfg(target_arch = "s390x")] use self::s390x::*;
+//#[cfg(target_arch = "asmjs")] mod asmjs;
+//#[cfg(target_arch = "asmjs")] use self::asmjs::*;
+//#[cfg(target_arch = "wasm32")] mod wasm32;
+//#[cfg(target_arch = "wasm32")] use self::wasm32::*;
 
 include!("Syscall.rs");

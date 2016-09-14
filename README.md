@@ -11,6 +11,11 @@
 The code is very much 'early-days', so expect breaking changes.
 
 
+## TODO
+
+* syscalls are not actually implemented for mips, mips64, s390x, powerpc or powerpc64, but could be by tring to use musl's `syscall_arch.h` headers
+
+
 ## Licensing
 
 The license for this project is AGPL.
