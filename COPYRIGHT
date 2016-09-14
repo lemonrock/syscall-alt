@@ -376,7 +376,7 @@ License: AGPL3
  If the disclaimer of warranty and limitation of liability provided above cannot be given local legal effect according to their terms, reviewing courts shall apply local law that most closely approximates an absolute waiver of all civil liability in connection with the Program, unless a warranty or assumption of liability accompanies a copy of the Program in return for a fee.Files: *
 Copyright: Copyright © 2016, Raphael Cohn <raphael.cohn@stormmq.com>
 
-Files: src/linux_like_syscall/x86/syscall6.rs
+Files: src/linux_like/x86/syscall6.rs
 Copyright: Copyright © 2016, Raphael Cohn <raphael.cohn@stormmq.com> (APGL3 portions), Copyright © 2014 The syscall.rs Project Developers (MIT portions)
 License: AGPL3 + MIT
  The MIT License (MIT)

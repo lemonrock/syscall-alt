@@ -2,15 +2,4 @@
 // Copyright © 2016 The developers of syscall-alt. See the COPYRIGHT file in the top-level directory of this distribution and at https://raw.githubusercontent.com/lemonrock/syscall-alt/master/COPYRIGHT.
 
 
-#![feature(asm)]
-#![feature(associated_consts)]
-#![feature(const_fn)]
-
-include!("PosixErrorNumber.rs");
-include!("SyscallArgument.rs");
-include!("SyscallNumber.rs");
-include!("SyscallResult.rs");
-
-pub mod linux_like;
-pub mod windows;
 pub mod E;

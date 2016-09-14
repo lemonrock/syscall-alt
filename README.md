@@ -15,6 +15,7 @@
 		* PowerPC is the only platform on which `EDEADLOCK != EDEADLK` (so watch out when using `match`)
 	* MIPS is ***very*** different to x86_64
 		* But it has ***exactly*** the same set of E numbers
+* SYS call numbers and E numbers are available for every arch, eg if you want to know them for `arm`, but are compiled for `x86_64`, they are available
 
 The code is very much 'early-days', so expect breaking changes.
 
