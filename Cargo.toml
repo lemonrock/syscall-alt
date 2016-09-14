@@ -4,7 +4,7 @@
 [package]
 name = "syscall-alt"
 description = "syscall-alt"
-keywords = ["syscall-alt"]
+keywords = ["syscall"]
 license = "MIT"
 authors = ["Raphael Cohn <raphael.cohn@stormmq.com>"]
 documentation = "https://github.com/lemonrock/syscall-alt/blob/master/README.md"
