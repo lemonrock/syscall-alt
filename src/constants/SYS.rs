@@ -6,7 +6,7 @@
 #[cfg(target_os = "dragonfly")] pub use ::constants::dragonfly::SYS::*;
 #[cfg(target_os = "freebsd")] pub use ::constants::freebsd::SYS::*;
 #[cfg(any(target_os = "android", target_os = "linux"))] pub use ::constants::linux_like::SYS::*;
-#[cfg(any(target_os = "ios", target_os = "macos"))] ppub use ::constants::macosx_like::SYS::*;
+#[cfg(any(target_os = "ios", target_os = "macos"))] pub use ::constants::macosx_like::SYS::*;
 #[cfg(target_os = "netbsd")] pub use ::constants::netbsd::SYS::*;
 #[cfg(target_os = "openbsd")] pub use ::constants::openbsd::SYS::*;
 #[cfg(target_os = "solaris")] pub use ::constants::solaris::SYS::*;
