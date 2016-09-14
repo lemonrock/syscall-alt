@@ -7,13 +7,21 @@
 
 * An enum defining common Linux syscalls;
 * Some minor wrapper logic to make straightforward to work with syscalls.
+* Correct Syscall / Posix error codes ('E'), eg `EINVAL`
+	* These differ slightly on MIPS and PowerPC
+	* MIPS64 is the same as MIPS
+	* PowerPC64 is the same as PowerPC
+	* PowerPC is ***nearly*** identical to x86_64 bar `EDEADLOCK`:-
+		* PowerPC is the only platform on which `EDEADLOCK != EDEADLK` (so watch out when using `match`)
+	* MIPS is ***very*** different to x86_64
+		* But it has ***exactly*** the same set of E numbers
 
 The code is very much 'early-days', so expect breaking changes.
 
 
 ## TODO
 
-* syscalls are not actually implemented for mips, mips64, s390x, powerpc or powerpc64, but could be by tring to use musl's `syscall_arch.h` headers
+* syscalls are not actually implemented for mips, mips64, powerpc, powerpc64, or s390x but could be by tring to use musl's `syscall_arch.h` headers (bar s390x)
 
 
 ## Licensing

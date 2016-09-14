@@ -10,6 +10,7 @@ use ::linux_like_syscall::SyscallArgument;
 use ::linux_like_syscall::SyscallResult;
 
 
+include!("E.rs");
 include!("SYS.rs");
 include!("syscall0.rs");
 include!("syscall1.rs");
