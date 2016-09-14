@@ -291,50 +291,49 @@ impl Syscall
 	#[inline(always)]
 	pub unsafe fn syscall0(self) -> SyscallResult
 	{
-		syscall0(self as SyscallNumber)
+		syscalls::syscall0(self as SyscallNumber)
 	}
 
 	#[inline(always)]
 	pub unsafe fn syscall1(self, a: SyscallArgument) -> SyscallResult
 	{
-		syscall1(self as SyscallNumber, a)
+		syscalls::syscall1(self as SyscallNumber, a)
 	}
 
 	#[inline(always)]
 	pub unsafe fn syscall2(self, a: SyscallArgument, b: SyscallArgument) -> SyscallResult
 	{
-		syscall2(self as SyscallNumber, a, b)
+		syscalls::syscall2(self as SyscallNumber, a, b)
 	}
 
 	#[inline(always)]
 	pub unsafe fn syscall3(self, a: SyscallArgument, b: SyscallArgument, c: SyscallArgument) -> SyscallResult
 	{
-		syscall3(self as SyscallNumber, a, b, c)
+		syscalls::syscall3(self as SyscallNumber, a, b, c)
 	}
 
 	#[inline(always)]
 	pub unsafe fn syscall4(self, a: SyscallArgument, b: SyscallArgument, c: SyscallArgument, d: SyscallArgument) -> SyscallResult
 	{
-		syscall4(self as SyscallNumber, a, b, c, d)
+		syscalls::syscall4(self as SyscallNumber, a, b, c, d)
 	}
 
 	#[inline(always)]
 	pub unsafe fn syscall5(self, a: SyscallArgument, b: SyscallArgument, c: SyscallArgument, d: SyscallArgument, e: SyscallArgument) -> SyscallResult
 	{
-		syscall5(self as SyscallNumber, a, b, c, d, e)
+		syscalls::syscall5(self as SyscallNumber, a, b, c, d, e)
 	}
 	
 	#[inline(always)]
 	pub unsafe fn syscall6(self, a: SyscallArgument, b: SyscallArgument, c: SyscallArgument, d: SyscallArgument, e: SyscallArgument, f: SyscallArgument) -> SyscallResult
 	{
-		syscall6(self as SyscallNumber, a, b, c, d, e, f)
+		syscalls::syscall6(self as SyscallNumber, a, b, c, d, e, f)
 	}
 	
-	// Only exists for AArch64 and ARM currently
 	#[cfg(any(target_arch = "aarch64", target_arch = "arm"))]
 	#[inline(always)]
 	pub unsafe fn syscall7(self, a: SyscallArgument, b: SyscallArgument, c: SyscallArgument, d: SyscallArgument, e: SyscallArgument, f: SyscallArgument, g: SyscallArgument) -> SyscallResult
 	{
-		syscall7(self as SyscallNumber, a, b, c, d, e, f, g)
+		syscalls::syscall7(self as SyscallNumber, a, b, c, d, e, f, g)
 	}
 }

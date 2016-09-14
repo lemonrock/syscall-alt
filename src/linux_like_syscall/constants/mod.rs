@@ -2,15 +2,18 @@
 // Copyright © 2016 The developers of syscall-alt. See the COPYRIGHT file in the top-level directory of this distribution and at https://raw.githubusercontent.com/lemonrock/syscall-alt/master/COPYRIGHT.
 
 
-use ::linux_like_syscall::constants::SYS::*;
+pub mod aarch64;
+pub mod arm;
+pub mod mips;
+pub mod mips64;
+pub mod powerpc;
+pub mod powerpc64;
+pub mod s390x;
+pub mod x86;
+pub mod x86_64;
 
+/// For the current architecture
+pub mod E;
 
-pub mod constants;
-pub mod syscalls;
-pub mod SyscallResults;
-
-
-include!("SyscallResult.rs");
-include!("SyscallArgument.rs");
-include!("SyscallNumber.rs");
-include!("Syscall.rs");
+/// For the current architecture
+pub mod SYS;
