@@ -19,6 +19,7 @@
 * SYS call numbers and E numbers are available for every arch, eg if you want to know them for `arm`, but are compiled for `x86_64`, they are available
 	* Watch out if using `EDEADLOCK`, `EDEADLCK`, `ENOTSUP` and `EOPNOTSUPP`; these vary in definition and value, sometimes being missing, sometimes being equal
 	* Take a little care with `EWOULDBLOCK` and `EAGAIN`; all current platforms make `EWOULDBLOCK` the same as `EAGAIN`, but this isn't required by POSIX
+* A windows stub, which contains EAGAIN, etc, as defined on Windows (but no syscall numbers)
 
 The code is very much 'early-days', so expect breaking changes.
 
@@ -27,7 +28,10 @@ This crate is `#[!no_std]`, and does not require the `std` library or the `libc`
 
 ## TODO
 
-* syscalls are not actually implemented for mips, mips64, powerpc, powerpc64, or s390x but could be by tring to use musl's `syscall_arch.h` headers (bar s390x)
+* syscalls are not actually implemented for Linux mips, mips64, powerpc, powerpc64, or s390x but could be by tring to use musl's `syscall_arch.h` headers (bar s390x)
+* We could implement iOS ARM 32-bit syscalls; see <https://stackoverflow.com/questions/4371897/arm-darwin-assembly-looking-for-system-calls-tutorial-perhaps> for ideas
+* Support ARM and ARM64 for the BSDs as and when rust gains support for them
+* Syscalling is not implemented for Solaris, and won't ever be implemented for Windows
 
 
 ## Licensing
