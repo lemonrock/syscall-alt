@@ -5,6 +5,7 @@
 #![feature(asm)]
 #![feature(associated_consts)]
 #![feature(const_fn)]
+#![no_std]
 
 include!("PosixErrorNumber.rs");
 include!("SyscallArgument.rs");
