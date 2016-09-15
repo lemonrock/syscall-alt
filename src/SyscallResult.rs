@@ -3,3 +3,8 @@
 
 
 pub type SyscallResult = SyscallArgument;
+
+pub const fn fromPosixErrorNumber(e: PosixErrorNumber) -> SyscallResult
+{
+	-(e as SyscallResult)
+}

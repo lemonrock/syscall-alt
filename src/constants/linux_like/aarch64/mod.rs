@@ -4,3 +4,4 @@
 
 pub mod E;
 pub mod SYS;
+pub mod SyscallResult;
