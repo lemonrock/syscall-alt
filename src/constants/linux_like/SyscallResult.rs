@@ -2,12 +2,12 @@
 // Copyright © 2016 The developers of syscall-alt. See the COPYRIGHT file in the top-level directory of this distribution and at https://raw.githubusercontent.com/lemonrock/syscall-alt/master/COPYRIGHT.
 
 
-#[cfg(target_arch = "aarch64")] pub use ::constants::linux_like::aarch64::E::*;
-#[cfg(target_arch = "arm")] pub use ::constants::linux_like::arm::E::*;
-#[cfg(target_arch = "mips")] pub use ::constants::linux_like::mips::E::*;
-#[cfg(target_arch = "mips64")] pub use ::constants::linux_like::mips64::E::*;
-#[cfg(target_arch = "powerpc")] pub use ::constants::linux_like::powerpc::E::*;
-#[cfg(target_arch = "powerpc64")] pub use ::constants::linux_like::powerpc64::E::*;
-#[cfg(target_arch = "s390x")] pub use ::constants::linux_like::s390x::E::*;
-#[cfg(target_arch = "x86")] pub use ::constants::linux_like::x86::E::*;
-#[cfg(target_arch = "x86_64")] pub use ::constants::linux_like::x86_64::E::*;
+#[cfg(target_arch = "aarch64")] pub use ::constants::linux_like::aarch64::SyscallResult::*;
+#[cfg(target_arch = "arm")] pub use ::constants::linux_like::arm::SyscallResult::*;
+#[cfg(target_arch = "mips")] pub use ::constants::linux_like::mips::SyscallResult::*;
+#[cfg(target_arch = "mips64")] pub use ::constants::linux_like::mips64::SyscallResult::*;
+#[cfg(target_arch = "powerpc")] pub use ::constants::linux_like::powerpc::SyscallResult::*;
+#[cfg(target_arch = "powerpc64")] pub use ::constants::linux_like::powerpc64::SyscallResult::*;
+#[cfg(target_arch = "s390x")] pub use ::constants::linux_like::s390x::SyscallResult::*;
+#[cfg(target_arch = "x86")] pub use ::constants::linux_like::x86::SyscallResult::*;
+#[cfg(target_arch = "x86_64")] pub use ::constants::linux_like::x86_64::SyscallResult::*;
