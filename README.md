@@ -22,6 +22,8 @@
 
 The code is very much 'early-days', so expect breaking changes.
 
+This crate is `#[!no_std]`, and does not require the `std` library or the `libc` crate
+
 
 ## TODO
 
