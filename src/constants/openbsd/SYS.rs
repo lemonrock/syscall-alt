@@ -5,6 +5,7 @@
 use ::SyscallNumber;
 
 
+// Originates from https://github.com/openbsd/src/blob/master/sys/sys/syscall.h (as of commit 2d337c4 4th September 2016)
 pub const SYS_accept4: SyscallNumber = 93;
 pub const SYS_accept: SyscallNumber = 30;
 pub const SYS_access: SyscallNumber = 33;
