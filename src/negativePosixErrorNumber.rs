@@ -2,19 +2,7 @@
 // Copyright © 2016 The developers of syscall-alt. See the COPYRIGHT file in the top-level directory of this distribution and at https://raw.githubusercontent.com/lemonrock/syscall-alt/master/COPYRIGHT.
 
 
-#![feature(asm)]
-#![feature(associated_consts)]
-#![feature(const_fn)]
-#![no_std]
-
-
-include!("PosixErrorNumber.rs");
-include!("SyscallArgument.rs");
-include!("SyscallNumber.rs");
-include!("SyscallResult.rs");
-include!("syscallResultFromPosixErrorNumber.rs");
-include!("negativePosixErrorNumber.rs");
-
-
-pub mod constants;
-pub mod syscalls;
+pub const fn negativePosixErrorNumber(e: PosixErrorNumber) -> PosixErrorNumber
+{
+	-e
+}

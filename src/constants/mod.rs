@@ -24,6 +24,9 @@ pub mod windows;
 pub mod E;
 
 /// For the current OS and architecture
+pub mod NegativeE;
+
+/// For the current OS and architecture
 pub mod SYS;
 
 /// For the current OS and architecture

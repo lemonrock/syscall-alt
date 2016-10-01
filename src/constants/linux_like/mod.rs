@@ -13,6 +13,7 @@ pub mod x86;
 pub mod x86_64;
 
 pub mod E;
+pub mod NegativeE;
 pub mod SYS;
 pub mod SyscallResult;
 

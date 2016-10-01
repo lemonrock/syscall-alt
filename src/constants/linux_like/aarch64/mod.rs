@@ -5,3 +5,4 @@
 pub mod E;
 pub mod SYS;
 pub mod SyscallResult;
+pub mod NegativeE;

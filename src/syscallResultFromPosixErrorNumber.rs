@@ -4,5 +4,5 @@
 
 pub const fn syscallResultFromPosixErrorNumber(e: PosixErrorNumber) -> SyscallResult
 {
-	-(e as SyscallResult)
+	negativePosixErrorNumber(e) as SyscallResult
 }
