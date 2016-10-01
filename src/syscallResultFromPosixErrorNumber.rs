@@ -2,4 +2,7 @@
 // Copyright © 2016 The developers of syscall-alt. See the COPYRIGHT file in the top-level directory of this distribution and at https://raw.githubusercontent.com/lemonrock/syscall-alt/master/COPYRIGHT.
 
 
-pub type SyscallResult = SyscallArgument;
+pub const fn syscallResultFromPosixErrorNumber(e: PosixErrorNumber) -> SyscallResult
+{
+	-(e as SyscallResult)
+}

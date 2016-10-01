@@ -7,10 +7,13 @@
 #![feature(const_fn)]
 #![no_std]
 
+
 include!("PosixErrorNumber.rs");
 include!("SyscallArgument.rs");
 include!("SyscallNumber.rs");
 include!("SyscallResult.rs");
+include!("syscallResultFromPosixErrorNumber.rs");
+
 
 pub mod constants;
 pub mod syscalls;
